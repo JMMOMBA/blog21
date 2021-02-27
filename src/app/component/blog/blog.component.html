@@ -1,0 +1,23 @@
+<div *ngIf="posts && posts.length > 0">
+    <h3 class="text-muted">{{ posts[postActual].titulo }}</h3>
+    <p class="bg-info text-wrap" style="width: 40rem;">Descripción: {{ posts[postActual].texto }}</p>
+    <p>Realizado por: {{ posts[postActual].autor }}</p>
+    <img [src]="posts[postActual].imagen" class="img-fluid rounded-circle" alt="">
+    <p class="badge text-wrap">Publicado: {{ posts[postActual].fecha }}</p>
+    <p>Categoría: {{ posts[postActual].categoria }}</p>
+    <button class="btn btn-outline-success" (click)="onClick(false)" [disabled]="postActual === 0">ANTERIOR</button>
+    <button class="btn btn-outline-primary ml-2" (click)="onClick(true)"
+        [disabled]="postActual === posts.length-1">SIGUIENTE</button>
+</div>
+<div class="eleccion">
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" (change)="onChange($event)">
+        <option value="todos">ELIGE TU CATEGORÍA</option>
+        <option [value]="categoria" *ngFor="let categoria of listaCategorias">
+            {{ categoria }}
+        </option>
+    </select>
+</div>
+<div>
+    <button class="btn btn-danger" (click)="onClickEliminar(pIndice)">ELIMINAR POST</button>
+</div>
+

@@ -1,0 +1,15 @@
+div {
+  background-color: #FFFFCC;
+}
+
+.titulo {
+  margin: auto;
+  background: #FF6666;
+  color: blue;
+  width: 45%;
+  text-align: center;
+}
+
+label {
+  color: blueviolet;
+}

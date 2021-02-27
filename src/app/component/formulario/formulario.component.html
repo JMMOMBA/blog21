@@ -1,0 +1,30 @@
+<div>
+    <h1 class="titulo">AÑADE TU PROPIO POST</h1>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>TÍTULO</label>
+            <input type="text" class="form-control" formControlName="titulo" ngModel>
+        </div>
+        <div class="form-group">
+            <label>TEXTO</label>
+            <input type="text" class="form-control" formControlName="texto" ngModel>
+        </div>
+        <div class="form-group">
+            <label>AUTOR</label>
+            <input type="text" class="form-control" formControlName="autor" ngModel>
+        </div>
+        <div class="form-group">
+            <label>IMAGEN</label>
+            <input type="text" class="form-control" formControlName="imagen" ngModel>
+        </div>
+        <div class="form-group">
+            <label>FECHA</label>
+            <input type="date" class="form-control" formControlName="fecha" ngModel>
+        </div>
+        <div class="form-group">
+            <label>CATEGORÍA</label>
+            <input type="text" class="form-control" formControlName="categoria" ngModel>
+        </div>
+        <input type="submit" value="ENVIAR" class="btn btn-info">
+    </form>
+</div>
